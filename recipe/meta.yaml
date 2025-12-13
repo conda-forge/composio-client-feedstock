@@ -1,5 +1,5 @@
 {% set name = "composio-client" %}
-{% set version = "1.19.0" %}
+{% set version = "1.20.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/composio_client-{{ version }}.tar.gz
-  sha256: 7e3fd52ea43491c79023f6c00c9c678cf62107a486656fab770ac569893ad068
+  sha256: e12e3901b650234427544c486873b22c6c700e7d8c2c6b8cf3c9e66e6bca0594
 
 build:
   noarch: python
