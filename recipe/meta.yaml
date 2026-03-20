@@ -1,5 +1,5 @@
 {% set name = "composio-client" %}
-{% set version = "1.28.0" %}
+{% set version = "1.29.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/composio_client-{{ version }}.tar.gz
-  sha256: 787869c1fba543f07aa26d1f64e5f37e4909465b37af24ec4b5a01fd73115045
+  sha256: 5bbc23a47538e9314bb88cdb9144fd270d5a128ce264936a51ab7db51d75801b
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - python >={{ python_min }}
     - httpx >=0.23.0,<1
     - pydantic >=1.9.0,<3
-    - typing_extensions >=4.10,<5
+    - typing_extensions >=4.14,<5
     - anyio >=3.5.0,<5
     - distro >=1.7.0,<2
     - sniffio
