@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: composio-client
-  version: 1.43.0
+  version: 2.0.1
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/composio_client-${{ version }}.tar.gz
-  sha256: bb96700da0c2aabc394cebc954be0ebf419557cc42b40f5d148aac52a5aff6f9
+  sha256: d23d185b5a45f6628263a37db56567bd8dab6b1dabc0de899ea8ce389b29517b
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -25,13 +25,9 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - httpx >=0.23.0,<1
-    - pydantic >=1.9.0,<3
-    - typing_extensions >=4.14,<5
-    - anyio >=3.5.0,<5
-    - distro >=1.7.0,<2
-    - sniffio
-
+    - httpx >=0.27
+    - pydantic >=2.9,<3
+    - typing_extensions >=4.12
 tests:
   - python:
       imports:
@@ -39,7 +35,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}
-        - "*"
+        - '*'
 
 about:
   summary: The official Python library for the composio API
