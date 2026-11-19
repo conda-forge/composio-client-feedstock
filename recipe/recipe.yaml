@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: composio-client
-  version: "2.1.35"
+  version: "2.1.36"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/composio_client-${{ version }}.tar.gz
-  sha256: 8b93504bf089461ee987f7c98f4c15fcb6eeb9df35ef690b0740d86651bbf608
+  sha256: 0d0efba16b4ba52e96f5a3413c36b44bfc726e1270a9bc4ec712c8fe70a2cbdc
 
 build:
   number: 0
